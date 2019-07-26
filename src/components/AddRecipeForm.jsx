@@ -1,4 +1,5 @@
 import React from "react";
+import * as Yup from "yup";
 
 import { Form, Field, withFormik, FieldArray } from "formik";
 
@@ -112,7 +113,8 @@ const formikOptions = {
 
       1000
     );
-  }
+  },
+  validationSchema: {}
 };
 
 export default withFormik(formikOptions)(AddRecipeForm);
