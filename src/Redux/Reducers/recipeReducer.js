@@ -6,13 +6,29 @@ const exampleRecipe = {
   name: "",
   category: "",
   ingredients: [],
-  instructions: [],
+  instructions: "",
+  cost: "",
   timeToCook: 0,
   difficulty: 1
 };
 
 const initialState = {
-  recipes: []
+  recipes: [
+    {
+      id: "1",
+      author: "Józsi",
+      name: "Csülkös bableves",
+      category: "Traditional",
+      ingredients: [
+        { name: "bab", amount: "sok" },
+        { name: "csülök", amount: "sok" }
+      ],
+      instructions: "Főzzed amíg jó nem lesz",
+      cost: "$$$",
+      timeToCook: 90,
+      difficulty: 5
+    }
+  ]
 };
 
 const recipeReducer = (state = initialState, action) => {
