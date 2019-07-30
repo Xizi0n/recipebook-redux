@@ -74,14 +74,12 @@
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
 }
 
-.divider-information {
+.divider__information {
   padding: var(--padding-default-lg);
-  grid-column: 1;
 }
 
 .divider__form {
   padding: var(--padding-default-lg);
-  grid-column: 2;
 }
 
 .add-recipe-form {
@@ -125,7 +123,9 @@
 .form-row {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   justify-content: space-between;
+  max-width: 100%;
 }
 
 
@@ -135,6 +135,7 @@
   color: white;
   border-radius: 5px;
   margin-bottom: var(--margin-default-md);
+  cursor: pointer;
 }
 
 .button--margin-left {
@@ -188,6 +189,7 @@ button:disabled {
   padding: var(--padding-default-md);
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
 .responsive-image {
@@ -216,6 +218,10 @@ button:disabled {
   max-width: 400px;
   border-radius: 5px;
   margin: 0 auto;
+}
+
+.card__image {
+  border-radius: 5px;
 }
 
 .card--wide {
@@ -277,4 +283,51 @@ button:disabled {
   background: var(--main-bg-color);
   color: var(--main-text-color);
   transition: 0.3s;
+}
+
+.normal-list {
+  list-style: circle;
+  margin: var(--margin-default-md) 0;
+}
+
+.normal-list__item {
+  font-size: var(--font-size-md);
+  padding: var(--padding-default-sm) 0;
+}
+
+.notfound {
+  font-size: 50px;
+  text-align: center;
+}
+
+.notfound__image {
+  margin-top: var(--margin-default-lg);
+  max-width: 350px;
+  height: auto;
+}
+
+.title {
+  text-align: center;
+  font-size: var(--font-size-title);
+  margin-bottom: 16px;
+}
+
+.subtitle {
+  font-size: var(--font-size-md);
+}
+
+.normal-list--left-padding {
+  padding-left: var(--padding-default-lg);
+}
+
+@media only screen and (max-width: 600px) {
+  .add-recipe-form {
+    width: 100%;
+    margin: 0;
+  }
+
+  .container {
+    margin: 0;
+    width: 100%;
+  }
 }

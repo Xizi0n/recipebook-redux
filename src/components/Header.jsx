@@ -7,7 +7,7 @@ const Header = () => {
       <nav>
         <ul className="navigation-list">
           <NavLink
-            to="/home"
+            to="/"
             activeClassName="navigation-list__item--active"
             style={{ textDecoration: "none" }}
           >

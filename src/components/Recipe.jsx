@@ -10,8 +10,12 @@ const Recipe = props => {
   return (
     <div className="grid-item">
       <div className="card">
-        <div className="card__image">
-          <img src="https://picsum.photos/350/200" alt="" />
+        <div>
+          <img
+            className="card__image"
+            src="https://picsum.photos/350/200"
+            alt=""
+          />
         </div>
         <div className="card__title">{recipe.name}</div>
         <div className="card__subtitle">

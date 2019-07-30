@@ -1,10 +1,11 @@
 import React from "react";
 
 const FormError = ({ errors, touched, property }) => {
+  const error = errors[property];
   return (
     <React.Fragment>
       {touched[property] && errors.name ? (
-        <div className="message message--error">{errors[property]}</div>
+        <div className="message message--error">{error}</div>
       ) : null}
     </React.Fragment>
   );

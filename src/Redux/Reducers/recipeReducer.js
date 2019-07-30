@@ -21,7 +21,10 @@ const initialState = {
       category: "Traditional",
       ingredients: [
         { name: "bab", amount: "sok" },
-        { name: "csülök", amount: "sok" }
+        { name: "csülök", amount: "sok" },
+        { name: "só", amount: "2ek" },
+        { name: "bors", amount: "2tk" },
+        { name: "paprika", amount: "2db" }
       ],
       instructions: "Főzzed amíg jó nem lesz",
       cost: "$$$",

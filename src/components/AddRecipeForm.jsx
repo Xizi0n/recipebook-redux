@@ -156,7 +156,6 @@ const formikOptions = {
   handleSubmit: (values, { props, setSubmitting, resetForm }) => {
     setTimeout(
       () => {
-        alert(JSON.stringify(values, null, 2));
         setSubmitting(false);
         props.dispatch({
           type: actionTypes.ADD_RECIPE,
@@ -189,8 +188,8 @@ const formikOptions = {
     ingredients: Yup.array()
       .of(
         Yup.object().shape({
-          name: Yup.string().required("Please set ingredient name"),
-          amount: Yup.string().required("Please set ingredient amount")
+          name: Yup.string(),
+          amount: Yup.string()
         })
       )
       .min(1, "You should enter at least 1 ingredients.")
